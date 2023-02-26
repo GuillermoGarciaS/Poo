@@ -6,6 +6,12 @@ import java.util.Random;
 
 public class Juego {
 
+    /*
+     * 
+     * Los public statics aqui los use para guardar las palabras
+     * asi como la operacion para que se escoga una aleatoriamente
+     */
+
     public static String getOpccionFacil() {
         List<String> Facil = Arrays.asList("perro", "gato", "lapiz"
                                                 ,"taza", "pluma", "libro"
