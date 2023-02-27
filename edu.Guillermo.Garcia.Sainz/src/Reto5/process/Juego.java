@@ -13,6 +13,7 @@ public class Juego {
      */
 
     public static String getOpccionFacil() {
+
         List<String> Facil = Arrays.asList("perro", "gato", "lapiz"
                                                 ,"taza", "pluma", "libro"
                                                 ,"cinta", "gel", "papel");
