@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
-
 /*
  * Esta plantilla ayudara a poder usarse en más proyectos con tan solo cambiar el texto,
  * ya que es de por si funcional 
@@ -23,8 +21,14 @@ public class Menu {
 
     private String opccion_invalida = "Esta opccion no está disponible, seleccione una opccion valida";
 
+
+    /*
+     * ver porque el MenuAction da error, que tambien da error en el actionList
+     * por lo que otros objetos abajo tambien tienen un error
+     */
+
     private ArrayList<String> optionList = new ArrayList<>();
-    private ArrayList<MaximizeAction> actionList = new ArrayList<>();
+    private ArrayList<MenuAction> actionList = new ArrayList<>();
 
     private boolean alive = true;
 
@@ -35,9 +39,12 @@ public class Menu {
         alive = false;
     }
 
+    /*
+     * Aqui agregaremos opcciones para el arraylist
+     */
 
 
-    public Menu agregarOpccion (String opccion, MaximizeAction accion) {
+    public Menu agregarOpccion (String opccion, MenuAction accion) {
 
         optionList.add(opccion);
         actionList.add(accion);
@@ -98,6 +105,10 @@ public class Menu {
         }
      }
 
+     /*
+      * Corroborar el porque esta opccion la ve como boleano
+      */
+
      public void seleccionarYCorrerOpcion(int opccion) {
         if (opccion = optionList.size()) {
             killMenu();
@@ -106,5 +117,5 @@ public class Menu {
         }
 
         actionList.get(opccion-1).run(scanner);
-     }
+    }
 }

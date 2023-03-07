@@ -4,8 +4,6 @@ import src.Reto5.process.*;
 
 import java.util.Scanner;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
-
 import src.Reto5.menu.*;
 
 
@@ -20,9 +18,12 @@ public class CLI {
       private static String modoDificil = "|Modo Dificil|";
       private static String seleccionarModoDificil = "Dificil";
 
+      /*
+       * ver porque la opccion scanner no resulta
+       */
 
       private static Menu menu = new Menu();
-      private static MaximizeAction easyAction = (scanner) -> {
+      private static MenuAction easyAction = (scanner) -> {
             System.out.println(modoFacil);
             String palabraFacil = "";
             palabraFacil = Juego.getModoFacil();
@@ -32,7 +33,7 @@ public class CLI {
       
       };
 
-      private static MaximizeAction intermediumAction = (scanner) -> {
+      private static MenuAction intermediumAction = (scanner) -> {
             System.out.println(modoFacil);
             String palabraIntermedia = "";
             palabraIntermedia = Juego.getModoIntermedio();
@@ -40,13 +41,17 @@ public class CLI {
             System.out.println();
       };
 
-      private static MaximizeAction HardAction = (scanner) -> {
+      private static MenuAction HardAction = (scanner) -> {
             System.out.println(modoDificil);
             String palabraDificil = "";
             palabraDificil = Juego.getModoDificil();
             System.out.println(palabraDificil);
             System.out.println();
       }; 
+
+      /*
+       * esto dara error por el conflicto causado en Menu
+       */
 
       static { 
             menu
@@ -63,9 +68,12 @@ public class CLI {
       }
 
       public static void showJuego(){
+      do {
             menu.showMenu();
             var option = menu.readOption();
             menu.seleccionarYCorrerOpcion(option);
       }while (menu.isAlive());
   }
+}
+
 

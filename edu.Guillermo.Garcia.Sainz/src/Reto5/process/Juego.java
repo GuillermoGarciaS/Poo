@@ -28,38 +28,39 @@ public class Juego {
 
         String letraYaIntroducida;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Adivine la siguiente palabra: ");
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Adivine la siguiente palabra: ");
 
-        while (letrasAdivinadas.size() != palabraFacil.length()) {
+            while (letrasAdivinadas.size() != palabraFacil.length()) {
 
-            boolean letraAdivinada = false;
-            letraYaIntroducida = scanner.next().toLowerCase();
-
-            for (int i = 0; i < palabraFacil.length(); i++) {
-
-                if (palabraFacil.charAt(i) == letraYaIntroducida.charAt(0)) {
-                    letraAdivinada = true;
-                    letrasAdivinadas.add(i);
-
-                }
-            }
-            if (letraAdivinada) {
-                letrasIntroducidas.add(letraYaIntroducida);
+                boolean letraAdivinada = false;
+                letraYaIntroducida = scanner.next().toLowerCase();
 
                 for (int i = 0; i < palabraFacil.length(); i++) {
-                    if (letrasAdivinadas.contains(i)) {
-                        System.out.println(palabraFacil.charAt(i));
-                    }
-                    else {
-                        System.out.println("_");
+
+                    if (palabraFacil.charAt(i) == letraYaIntroducida.charAt(0)) {
+                        letraAdivinada = true;
+                        letrasAdivinadas.add(i);
+
                     }
                 }
-                System.out.println();
-            }
-            else {
-                letrasIntroducidas.add(letraYaIntroducida);
-                System.out.println("Letra incorrecta! intentalo de nuevo");
+                if (letraAdivinada) {
+                    letrasIntroducidas.add(letraYaIntroducida);
+
+                    for (int i = 0; i < palabraFacil.length(); i++) {
+                        if (letrasAdivinadas.contains(i)) {
+                            System.out.println(palabraFacil.charAt(i));
+                        }
+                        else {
+                            System.out.println("_");
+                        }
+                    }
+                    System.out.println();
+                }
+                else {
+                    letrasIntroducidas.add(letraYaIntroducida);
+                    System.out.println("Letra incorrecta! intentalo de nuevo");
+                }
             }
         }
     }
@@ -79,38 +80,39 @@ public class Juego {
 
         String letraYaIntroducida;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Adivine la siguiente palabra: ");
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Adivine la siguiente palabra: ");
 
-        while (letrasAdivinadas.size() != palabraIntermedia.length()) {
+            while (letrasAdivinadas.size() != palabraIntermedia.length()) {
 
-            boolean letraAdivinada = false;
-            letraYaIntroducida = scanner.next().toLowerCase();
-
-            for (int i = 0; i < palabraIntermedia.length(); i++) {
-
-                if (palabraIntermedia.charAt(i) == letraYaIntroducida.charAt(0)) {
-                    letraAdivinada = true;
-                    letrasAdivinadas.add(i);
-
-                }
-            }
-            if (letraAdivinada) {
-                letrasIntroducidas.add(letraYaIntroducida);
+                boolean letraAdivinada = false;
+                letraYaIntroducida = scanner.next().toLowerCase();
 
                 for (int i = 0; i < palabraIntermedia.length(); i++) {
-                    if (letrasAdivinadas.contains(i)) {
-                        System.out.println(palabraIntermedia.charAt(i));
-                    }
-                    else {
-                        System.out.println("_");
+
+                    if (palabraIntermedia.charAt(i) == letraYaIntroducida.charAt(0)) {
+                        letraAdivinada = true;
+                        letrasAdivinadas.add(i);
+
                     }
                 }
-                System.out.println();
-            }
-            else {
-                letrasIntroducidas.add(letraYaIntroducida);
-                System.out.println("Letra incorrecta! intentalo de nuevo");
+                if (letraAdivinada) {
+                    letrasIntroducidas.add(letraYaIntroducida);
+
+                    for (int i = 0; i < palabraIntermedia.length(); i++) {
+                        if (letrasAdivinadas.contains(i)) {
+                            System.out.println(palabraIntermedia.charAt(i));
+                        }
+                        else {
+                            System.out.println("_");
+                        }
+                    }
+                    System.out.println();
+                }
+                else {
+                    letrasIntroducidas.add(letraYaIntroducida);
+                    System.out.println("Letra incorrecta! intentalo de nuevo");
+                }
             }
         }
     }
@@ -130,38 +132,39 @@ public class Juego {
 
         String letraYaIntroducida;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Adivine la siguiente palabra: ");
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Adivine la siguiente palabra: ");
 
-        while (letrasAdivinadas.size() != palabraDificil.length()) {
+            while (letrasAdivinadas.size() != palabraDificil.length()) {
 
-            boolean letraAdivinada = false;
-            letraYaIntroducida = scanner.next().toLowerCase();
-
-            for (int i = 0; i < palabraDificil.length(); i++) {
-
-                if (palabraDificil.charAt(i) == letraYaIntroducida.charAt(0)) {
-                    letraAdivinada = true;
-                    letrasAdivinadas.add(i);
-
-                }
-            }
-            if (letraAdivinada) {
-                letrasIntroducidas.add(letraYaIntroducida);
+                boolean letraAdivinada = false;
+                letraYaIntroducida = scanner.next().toLowerCase();
 
                 for (int i = 0; i < palabraDificil.length(); i++) {
-                    if (letrasAdivinadas.contains(i)) {
-                        System.out.println(palabraDificil.charAt(i));
-                    }
-                    else {
-                        System.out.println("_");
+
+                    if (palabraDificil.charAt(i) == letraYaIntroducida.charAt(0)) {
+                        letraAdivinada = true;
+                        letrasAdivinadas.add(i);
+
                     }
                 }
-                System.out.println();
-            }
-            else {
-                letrasIntroducidas.add(letraYaIntroducida);
-                System.out.println("Letra incorrecta! intentalo de nuevo");
+                if (letraAdivinada) {
+                    letrasIntroducidas.add(letraYaIntroducida);
+
+                    for (int i = 0; i < palabraDificil.length(); i++) {
+                        if (letrasAdivinadas.contains(i)) {
+                            System.out.println(palabraDificil.charAt(i));
+                        }
+                        else {
+                            System.out.println("_");
+                        }
+                    }
+                    System.out.println();
+                }
+                else {
+                    letrasIntroducidas.add(letraYaIntroducida);
+                    System.out.println("Letra incorrecta! intentalo de nuevo");
+                }
             }
         }
     }
