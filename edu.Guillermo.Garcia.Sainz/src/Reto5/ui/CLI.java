@@ -2,8 +2,6 @@ package src.Reto5.ui;
 
 import src.Reto5.process.*;
 
-import java.util.Scanner;
-
 import src.Reto5.menu.*;
 
 

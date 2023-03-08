@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Agradecimientos a Luciel por ayudarme a entender mejor el uso de este mismo
  */
 
-public class Menu {
+public class Menu { 
     
     Scanner scanner = new Scanner(System.in);
 

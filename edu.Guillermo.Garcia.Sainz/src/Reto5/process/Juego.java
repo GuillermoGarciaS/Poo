@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Juego {
 
-    public static void getModoFacil () {
+    public static String getModoFacil () {
 
         /*
          * Para esta parte me atore, se puede notar que es un tanto diferente
@@ -65,7 +65,7 @@ public class Juego {
         }
     }
 
-    public static void getModoIntermedio() {
+    public static String getModoIntermedio() {
 
                 List<String> intermedias = Arrays.asList("bateria", "entrada", "moneda"
                                                               ,"domino", "ajedrez", "pantalla"
@@ -117,7 +117,7 @@ public class Juego {
         }
     }
 
-    public static void getModoDificil() {
+    public static String getModoDificil() {
 
                 List<String> dificiles = Arrays.asList("bateria", "entrada", "moneda"
                                                               ,"domino", "ajedrez", "pantalla"
