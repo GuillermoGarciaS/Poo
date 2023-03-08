@@ -16,10 +16,6 @@ public class CLI {
       private static String modoDificil = "|Modo Dificil|";
       private static String seleccionarModoDificil = "Dificil";
 
-      /*
-       * ver porque la opccion scanner no resulta
-       */
-
       private static Menu menu = new Menu();
       private static MenuAction easyAction = (scanner) -> {
             System.out.println(modoFacil);
@@ -46,10 +42,6 @@ public class CLI {
             System.out.println(palabraDificil);
             System.out.println();
       }; 
-
-      /*
-       * esto dara error por el conflicto causado en Menu
-       */
 
       static { 
             menu

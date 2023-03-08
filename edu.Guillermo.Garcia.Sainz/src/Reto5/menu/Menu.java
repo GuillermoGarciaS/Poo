@@ -110,7 +110,7 @@ public class Menu {
       */
 
      public void seleccionarYCorrerOpcion(int opccion) {
-        if (opccion = optionList.size()) {
+        if (opccion == optionList.size()) {
             killMenu();
             System.out.println("Gracias por usar el sistema uwu");
             return;
