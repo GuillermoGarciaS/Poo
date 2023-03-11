@@ -17,6 +17,8 @@ public class CLI {
       private static String seleccionarModoDificil = "Dificil";
 
       private static Menu menu = new Menu();
+
+
       private static MenuAction easyAction = (scanner) -> {
             System.out.println(modoFacil);
             String palabraFacil = "";
@@ -28,7 +30,7 @@ public class CLI {
       };
 
       private static MenuAction intermediumAction = (scanner) -> {
-            System.out.println(modoFacil);
+            System.out.println(modoIntermedio);
             String palabraIntermedia = "";
             palabraIntermedia = Juego.getModoIntermedio();
             System.out.println(palabraIntermedia);

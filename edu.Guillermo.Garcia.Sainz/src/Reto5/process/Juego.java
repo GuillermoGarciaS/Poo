@@ -52,7 +52,7 @@ public class Juego {
                             System.out.println(palabraFacil.charAt(i));
                         }
                         else {
-                            System.out.println("_");
+                            System.out.print("_");
                         }
                     }
                     System.out.println();
@@ -63,13 +63,14 @@ public class Juego {
                 }
             }
         }
+        return palabraFacil;
     }
 
     public static String getModoIntermedio() {
 
-                List<String> intermedias = Arrays.asList("bateria", "entrada", "moneda"
-                                                              ,"domino", "ajedrez", "pantalla"
-                                                              ,"memoria", "cinturon", "guitarra");
+        List<String> intermedias = Arrays.asList("bateria", "entrada", "moneda"
+                                                       ,"domino", "ajedrez", "pantalla"
+                                                       ,"memoria", "cinturon", "guitarra");
         Random random = new Random();
         int palabraRandom = random.nextInt(intermedias.size());
         String palabraIntermedia = intermedias.get(palabraRandom);
@@ -115,6 +116,7 @@ public class Juego {
                 }
             }
         }
+        return palabraIntermedia;
     }
 
     public static String getModoDificil() {
@@ -167,6 +169,7 @@ public class Juego {
                 }
             }
         }
-    }
+        return palabraDificil;
+    } 
 }
 
