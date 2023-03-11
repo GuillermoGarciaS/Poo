@@ -49,7 +49,7 @@ public class Juego {
 
                     for (int i = 0; i < palabraFacil.length(); i++) {
                         if (letrasAdivinadas.contains(i)) {
-                            System.out.println(palabraFacil.charAt(i));
+                            System.out.print(palabraFacil.charAt(i));
                         }
                         else {
                             System.out.print("_");
@@ -102,10 +102,10 @@ public class Juego {
 
                     for (int i = 0; i < palabraIntermedia.length(); i++) {
                         if (letrasAdivinadas.contains(i)) {
-                            System.out.println(palabraIntermedia.charAt(i));
+                            System.out.print(palabraIntermedia.charAt(i));
                         }
                         else {
-                            System.out.println("_");
+                            System.out.print("_");
                         }
                     }
                     System.out.println();
@@ -155,10 +155,8 @@ public class Juego {
 
                     for (int i = 0; i < palabraDificil.length(); i++) {
                         if (letrasAdivinadas.contains(i)) {
-                            System.out.println(palabraDificil.charAt(i));
-                        }
-                        else {
-                            System.out.println("_");
+                            System.out.print(palabraDificil.charAt(i));
+                                System.out.print("_");
                         }
                     }
                     System.out.println();
@@ -172,4 +170,3 @@ public class Juego {
         return palabraDificil;
     } 
 }
-

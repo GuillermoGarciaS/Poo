@@ -23,7 +23,7 @@ public class CLI {
             System.out.println(modoFacil);
             String palabraFacil = "";
             palabraFacil = Juego.getModoFacil();
-            System.out.println(palabraFacil);
+            System.out.print("Bien hecho! tu palabra era: " + palabraFacil);
             System.out.println();
 
       
@@ -33,7 +33,7 @@ public class CLI {
             System.out.println(modoIntermedio);
             String palabraIntermedia = "";
             palabraIntermedia = Juego.getModoIntermedio();
-            System.out.println(palabraIntermedia);
+            System.out.print(palabraIntermedia);
             System.out.println();
       };
 
@@ -41,7 +41,7 @@ public class CLI {
             System.out.println(modoDificil);
             String palabraDificil = "";
             palabraDificil = Juego.getModoDificil();
-            System.out.println(palabraDificil);
+            System.out.print(palabraDificil);
             System.out.println();
       }; 
 
@@ -67,5 +67,3 @@ public class CLI {
       }while (menu.isAlive());
   }
 }
-
-
